@@ -1,0 +1,10 @@
+web:
+  image: nginx:alpine
+  volumes:
+   - /Users/rchaser53/Desktop/nginx-playground/nginx.conf:/etc/nginx/nginx.conf
+   - /Users/rchaser53/Desktop/nginx-playground/html:/etc/nginx/html
+  ports:
+   - "8080:80"
+  environment:
+   - NGINX_HOST=localhost
+   - NGINX_PORT=80
